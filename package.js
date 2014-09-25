@@ -7,7 +7,6 @@ Package.describe({
 Package.onUse(function(api) {
   api.versionsFrom('METEOR@0.9.2.2');
   api.use('templating', 'client');
-  api.addFiles('gad:meteor-unify.js');
 
   api.addFiles('unify.html', 'client');
   api.addFiles('unify.js', 'client');
@@ -17,6 +16,4 @@ Package.onUse(function(api) {
 
 Package.onTest(function(api) {
   api.use('tinytest');
-  api.use('gad:meteor-unify');
-  api.addFiles('gad:meteor-unify-tests.js');
 });
