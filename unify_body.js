@@ -23,59 +23,22 @@ if (Meteor.isClient) {
     });
 
     jQuery.getScript("/assets/plugins/fancybox/source/jquery.fancybox.pack.js", function(){
-            tmpl.$(".fancybox-button").fancybox({
-            groupAttr: 'data-rel',
-            prevEffect: 'none',
-            nextEffect: 'none',
-            closeBtn: true,
-            helpers: {
-                title: {
-                    type: 'inside'
-                    }
+        tmpl.$(".fancybox-button").fancybox({
+        groupAttr: 'data-rel',
+        prevEffect: 'none',
+        nextEffect: 'none',
+        closeBtn: true,
+        helpers: {
+            title: {
+                type: 'inside'
                 }
-            });
+            }
+        });
     });
 
     jQuery.getScript("/assets/js/pages/index.js", function() {
       Index.initParallaxSlider(); 
-    });
-
-    jQuery.getScript("/tinymce/tinymce.min.js", function() {
-      tinymce.init({
-        init_instance_callback : function(editor) {
-              console.log("Editor: " + editor.id + " is now initialized.");
-          },      //some note
-          selector: "textarea",
-          skin_url: '/tinymce/skins/lightgray',
-          theme_url: '/tinymce/themes/modern/theme.min.js',
-          plugins: [
-            "advlist autolink lists link image charmap print preview anchor",
-            "searchreplace visualblocks code fullscreen",
-            "insertdatetime media table contextmenu paste"
-          ],
-          external_plugins: {
-              "advlist": "/tinymce/plugins/advlist/plugin.min.js",
-              "autolink": "/tinymce/plugins/autolink/plugin.min.js",
-              "lists": "/tinymce/plugins/lists/plugin.min.js",
-              "link": "/tinymce/plugins/link/plugin.min.js",
-              "image": "/tinymce/plugins/image/plugin.min.js",
-              "charmap": "/tinymce/plugins/charmap/plugin.min.js",
-              "print": "/tinymce/plugins/print/plugin.min.js",
-              "preview": "/tinymce/plugins/preview/plugin.min.js",
-              "anchor": "/tinymce/plugins/anchor/plugin.min.js",
-              "searchreplace": "/tinymce/plugins/searchreplace/plugin.min.js",
-              "visualblocks": "/tinymce/plugins/visualblocks/plugin.min.js",
-              "code": "/tinymce/plugins/code/plugin.min.js",
-              "fullscreen": "/tinymce/plugins/fullscreen/plugin.min.js",
-              "image": "/tinymce/plugins/image/plugin.min.js",
-              "insertdatetime": "/tinymce/plugins/insertdatetime/plugin.min.js",
-              "media": "/tinymce/plugins/media/plugin.min.js",
-              "table": "/tinymce/plugins/table/plugin.min.js",
-              "contextmenu": "/tinymce/plugins/contextmenu/plugin.min.js",              
-              "paste": "/tinymce/plugins/paste/plugin.min.js",              
-          },          
-          toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"       
-       });
+    }););
     });    
 
 

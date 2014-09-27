@@ -6,5 +6,4 @@ _How to install_
 * clone current project into meteorproject/packages/ (create packages folder if doesn't exist)
 * meteor add meteor-unify
 
-
 Thanks to (https://github.com/wordtreefoundation/meteor-metronic)
